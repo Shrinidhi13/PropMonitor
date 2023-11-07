@@ -96,7 +96,7 @@
     background: black;
 }
 
-@media only screen and(max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .navbar-nav {
         text-align: center;
     }
@@ -115,5 +115,15 @@
 
     .carousel .card-bottom {
         display: none;
+    }
+}
+
+/* Apply the animation only on screens larger than 767px */
+
+@media (min-width: 768px) {
+    .animated-card {
+        transform: translateY(120%);
+        opacity: 0;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 }

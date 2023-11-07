@@ -9,3 +9,33 @@ function searchProperty() {
     alert("Searching for " + propertyType + " in " + location);
 }
 
+function animateCardsOnScroll() {
+    // Check the screen width before applying the animation
+    if (window.innerWidth >= 768) {
+        const cards = document.querySelectorAll('.animated-card');
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const cardHeight = card.getBoundingClientRect().height;
+            const windowHeight = window.innerHeight;
+
+            // Adjust the scroll position to trigger the animation a bit earlier
+            if (cardTop < windowHeight - cardHeight / 100) {
+                card.style.transform = 'translateY(0)';
+                card.style.opacity = 1;
+            } else {
+                card.style.transform = 'translateY(120%)';
+                card.style.opacity = 1;
+                card.style.transition = 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)';
+            }
+        });
+    }
+}
+
+// Attach the function to the scroll event
+window.addEventListener('scroll', animateCardsOnScroll);
+
+// Call the function initially to check the cards' visibility on page load
+animateCardsOnScroll();
+
+
