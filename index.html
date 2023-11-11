@@ -37,12 +37,12 @@
                             Buy
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#transactions">Transaction</a></li>
+                            <li><a class="dropdown-item" href="#About">About</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#Agent-Form">Agent Form</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -51,40 +51,27 @@
                             Rent
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#transactions">Transaction</a></li>
+                            <li><a class="dropdown-item" href="#About">About</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#Agent-Form">Agent Form</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Projects
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Service
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#Services">View</a></li>
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#Contact">Contact</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -93,17 +80,21 @@
                             Agents
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">View transactions</a></li>
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#Agent-Form">Agent form</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link btn text-white bg-dark px-3" href="#">Contact Us</a>
+                        <a class="nav-link btn-outline-dark px-3" aria-current="page" href="#QNA">Q&A</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn text-white bg-dark px-3" href="#Contact">Contact Us</a>
                     </li>
                 </ul>
 
@@ -135,9 +126,11 @@
                                 <div class="form-group">
                                     <label for="propertyType">Select Property Type:</label>
                                     <select class="form-control" id="propertyType">
-                                        <option value="flat">Flat</option>
-                                        <option value="bungalow">Bungalow</option>
-                                        <option value="farmhouse">Farmhouse</option>
+                                        <option value="flat">Apartment</option>
+                                        <option value="bungalow">Agricultural land</option>
+                                        <option value="farmhouse">Independent House</option>
+                                        <option value="farmhouse">Residential land</option>
+                                        <option value="farmhouse">Commericial land</option>
                                     </select>
                                 </div>
 
@@ -222,11 +215,11 @@
     </div>
 
     <!-- Content -->
-    <section class="container mt-5 mt-lg-0" style="margin-top: 100px;">
+    <section class="container mt-5 mt-lg-0" style="margin-top: 100px;" id="transactions">
 
         <p class="pt-5">Properties</p>
         <div class="d-flex">
-            <h2>Here are some of them</h2>
+            <h2>Know more about the transactions.</h2>
             <h6 class="ms-auto btn btn-dark" style="background-color: black; color: white;">Explore All <span
                     class="arrow-icon">&rarr;</span></h6>
         </div>
@@ -242,12 +235,12 @@
                     <img src="home2.jpg" class="card-img-top" alt="Property 1 Image">
                     <div class="card-body">
                         <h5 class="card-title">Property 1</h5>
-                        <p class="card-text text-dark">Type: House</p>
+                        <p class="card-text text-dark">Type: Independent House</p>
                         <p class="card-text text-success">Square Footage: XXX sq. ft.</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <span class="text-success">&#8377;XXX,XXX</span>
-                        <button class="btn btn-dark">Buy Now</button>
+                        <button class="btn btn-dark">View now</button>
                     </div>
                 </div>
             </div>
@@ -261,12 +254,12 @@
                     <img src="verne-ho-0LAJfSNa-xQ-unsplash.jpg" class="card-img-top" alt="Property 2 Image">
                     <div class="card-body">
                         <h5 class="card-title">Property 2</h5>
-                        <p class="card-text text-dark">Type: Flat</p>
+                        <p class="card-text text-dark">Type: Apartment</p>
                         <p class="card-text text-success">Square Footage: YYY sq. ft.</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <span class="text-success">&#8377;YYY,YYY</span>
-                        <button class="btn btn-dark">Buy Now</button>
+                        <button class="btn btn-dark">View now</button>
                     </div>
                 </div>
             </div>
@@ -280,12 +273,12 @@
                     <img src="home3.jpg" class="card-img-top" alt="Property 3 Image">
                     <div class="card-body">
                         <h5 class="card-title ">Property 3</h5>
-                        <p class="card-text text-dark">Type: Farmhouse</p>
+                        <p class="card-text text-dark">Type: Agricultural land</p>
                         <p class="card-text text-success">Square Footage: ZZZ sq. ft.</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <span class="text-success">&#8377;ZZZ,ZZZ</span>
-                        <button class="btn btn-dark">Buy Now</button>
+                        <button class="btn btn-dark">View now</button>
                     </div>
                 </div>
             </div>
@@ -324,7 +317,7 @@
     </section>
 
 
-    <section class="about section-padding" style="margin-top: 40px;">
+    <section class="about section-padding" style="margin-top: 40px;" id="Services">
         <div class="text-center">
             <h2>Our Services</h2>
         </div>
@@ -369,9 +362,9 @@
     </section>
 
     <!-- Forms -->
-    <div class="container mt-5">
+    <div class="container mt-5" id="Agent-Form">
         <div class="text-center">
-            <h1 class="custom-background">Agents Contact Form</h1>
+            <h1 class="custom-background">Transaction form..</h1>
         </div>
         <div class="row">
             <div class="col-lg-7 mx-auto">
@@ -409,10 +402,11 @@
                                                     class="required">*</span></label>
                                             <select id="form_need" name="need" class="form-control" required="required">
                                                 <option value="" selected disabled>--Select Your Issue--</option>
-                                                <option>List a Rental Property</option>
-                                                <option>List a selling Property</option>
-                                                <option>List a Farn-house</option>
-                                                <option>Other</option>
+                                                <option value="flat">Apartment</option>
+                                                <option value="bungalow">Agricultural land</option>
+                                                <option value="farmhouse">Independent House</option>
+                                                <option value="farmhouse">Residential land</option>
+                                                <option value="farmhouse">Commericial land</option>
                                             </select>
                                         </div>
                                     </div>
@@ -428,8 +422,8 @@
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-success btn-send pt-2 btn-block">Send
                                             Message</button>
-                                        <p class="text-danger mt-2">*Agents, please fill this form for listing your
-                                            property.</p>
+                                        <p class="text-danger mt-2">*Agents can list there transactions here by filling
+                                            the form.</p>
                                     </div>
                                 </div>
                             </div>
@@ -440,10 +434,10 @@
         </div>
     </div>
 
-    <article class="container mt-5 mt-lg-0" style="margin-top: 100px;">
+    <article class="container mt-5 mt-lg-0" style="margin-top: 100px;" id="About">
         <p class="pt-5">Blogs</p>
         <div class="d-flex">
-            <h2>Read about the available properties</h2>
+            <h2 id="About">Read about the available properties</h2>
             <h6 class="ms-auto btn btn-info text-white"> Read more <span class="arrow-icon">&rarr;</span></h6>
         </div>
 
@@ -515,7 +509,7 @@
 
     <!--QNA Section-->
 
-    <section class="about section-padding" style="margin-top: 40px">
+    <section class="about section-padding" style="margin-top: 40px" id="QNA">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-12 mt-md-3">
@@ -594,7 +588,7 @@
 
     <!--Footer-->
 
-    <footer class="bg-dark bg-footer" style="margin-top: 80px">
+    <footer class="bg-dark bg-footer" style="margin-top: 80px" id="Contact">
         <div class="container">
             <div class="row">
 
@@ -622,7 +616,8 @@
                     <h5 class="text-light">Stay Connected</h5>
                     <ul class="text-unstyled">
                         <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                        <li><a href="https://www.linkedin.com/company/real-estate-in/"><i class="fab fa-linkedin"></i>
+                                Linkedin</a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
