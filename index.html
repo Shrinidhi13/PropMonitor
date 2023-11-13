@@ -131,6 +131,7 @@
                                         <option value="farmhouse">Independent House</option>
                                         <option value="farmhouse">Residential land</option>
                                         <option value="farmhouse">Commericial land</option>
+                                        <option value="farmhouse">Warehouse</option>
                                     </select>
                                 </div>
 
@@ -220,8 +221,14 @@
         <p class="pt-5">Properties</p>
         <div class="d-flex">
             <h2>Know more about the transactions.</h2>
-            <h6 class="ms-auto btn btn-dark" style="background-color: black; color: white;">Explore All <span
-                    class="arrow-icon">&rarr;</span></h6>
+            <h6 class="ms-auto btn btn-dark" style="background-color: black; color: white;"
+                onclick="redirectToTransaction()">Explore All <span class="arrow-icon">&rarr;</span></h6>
+
+            <script>
+                function redirectToTransaction() {
+                    window.location.href = 'transaction.html';
+                }
+            </script>
         </div>
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-4 mt-2 animated-card">
@@ -364,7 +371,7 @@
     <!-- Forms -->
     <div class="container mt-5" id="Agent-Form">
         <div class="text-center">
-            <h1 class="custom-background">Transaction form..</h1>
+            <h1 class="custom-background">Add Transaction</h1>
         </div>
         <div class="row">
             <div class="col-lg-7 mx-auto">
@@ -410,6 +417,12 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="formFileMultiple" class="form-label">Upload property related docs
+                                        here</label>
+                                    <input class="form-control" type="file" id="formFileMultiple" multiple>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
