@@ -162,9 +162,12 @@ function updateDateDisplay() {
 }
 
 // Function to check screen size and display alert
+var hasAlertBeenShown = false;
+
 function checkScreenSize() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 && !hasAlertBeenShown) {
         alert("For a better experience, we recommend using the site in landscape mode on your mobile device.");
+        hasAlertBeenShown = true;
     }
 }
 

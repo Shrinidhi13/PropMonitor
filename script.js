@@ -39,3 +39,9 @@ window.addEventListener('scroll', animateCardsOnScroll);
 animateCardsOnScroll();
 
 
+
+
+function redirectToTransactionsDetails() {
+
+    window.location.href = 'transaction.html#TransactionDetails';
+}
