@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg white sticky-top fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="PropMonitor.ico" alt="logo" class="w-30" id="logo">
+                <img src="download.png" alt="logo" class="w-30" id="logo">
                 <span class="company-name">PropMonitor</span>
             </a>
 
@@ -49,7 +49,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="index.html#Agent-Form">Agent Form</a></li>
+                            <li><a class="dropdown-item" href="index.html#Agent-Form">Add your property</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -63,7 +63,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="index.html#Agent-Form">Agent Form</a></li>
+                            <li><a class="dropdown-item" href="index.html#Agent-Form">Add your property</a></li>
                         </ul>
                     </li>
 
@@ -84,7 +84,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Agents
+                            Transaction
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#TransactionDetails">View transactions</a></li>
@@ -92,7 +92,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="index.html#Agent-Form">Agent form</a></li>
+                            <li><a class="dropdown-item" href="index.html#Agent-Form">Add your property</a></li>
                         </ul>
                     </li>
 
@@ -120,18 +120,23 @@
                         <button onclick="updateGraph('both')" data-type="both">All</button>
                         <button onclick="updateGraph('Apartment')" data-type="Apartment">Apartment</button>
                         <button onclick="updateGraph('Warehouse')" data-type="Warehouse">Warehouse</button>
-                        <button onclick="updateGraph('Agricultural')" data-type="Agricultural">Agricultural</button>
+                        <button onclick="updateGraph('Agricultural')" data-type="Agricultural">Agricultural
+                            land</button>
                         <button onclick="updateGraph('CommercialLand')" data-type="CommercialLand">Commercial
+                            Land</button>
+
+                        <button onclick="updateGraph('residentialLandData')" data-type="residentialLandData">Residential
                             Land</button>
                     </div>
                 </div>
 
-                <div class="date-container">
-                    <label for="datePicker" class="date-label">Select Date:</label>
-                    <div class="date-input-wrapper">
-                        <input type="date" id="datePicker" onchange="updateDateDisplay()">
-                        <div id="selectedDate"></div>
-                    </div>
+
+            </div>
+            <div class="date-container">
+                <label for="datePicker" class="date-label">Select Date:</label>
+                <div class="date-input-wrapper">
+                    <input type="date" id="datePicker" onchange="updateDateDisplay()">
+                    <div id="selectedDate"></div>
                 </div>
             </div>
             <canvas id="salesGraph"></canvas>
@@ -147,7 +152,7 @@
         <div class="stats-container">
             <h2>Transaction details</h2>
             <div class="stat-block">Total Transactions: <span id="totalTransactions">0</span></div>
-            <div class="stat-block">Total Worth: <span id="totalWorth">0</span></div>
+            <div class="stat-block">Total Worth: &#8377;<span id="totalWorth">0</span></div>
             <div class="stat-block">Total Units: <span id="totalUnits">0</span></div>
             <div class="stat-block">Buildings: <span id="totalBuildings">0</span></div>
             <div class="stat-block">Lands: <span id="totalLands">0</span></div>

@@ -40,6 +40,16 @@ const apartmentData = months.map(() => Math.floor(Math.random() * 1000));
 const warehouseData = months.map(() => Math.floor(Math.random() * 1000));
 const agriData = months.map(() => Math.floor(Math.random() * 1000));
 const commercialLandData = months.map(() => Math.floor(Math.random() * 1000));
+const residentialLandData = months.map(() => Math.floor(Math.random() * 1000));
+
+const residentialLandDataset = {
+    label: 'Residential Land',
+    data: residentialLandData,
+    borderColor: 'rgba(128, 0, 128, 1)', // Purple color
+    backgroundColor: 'rgba(231, 20, 231, 0.1)', // Lighter purple color
+    fill: true,
+};
+
 
 const apartmentDataset = {
     label: 'Apartment',
@@ -79,7 +89,7 @@ const salesChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: months,
-        datasets: [apartmentDataset, warehouseDataset, agriDataset, commercialLandDataset],
+        datasets: [apartmentDataset, warehouseDataset, agriDataset, commercialLandDataset, residentialLandDataset],
     },
     options: {
         scales: {
@@ -99,8 +109,10 @@ function updateGraph(type) {
         salesChart.data.datasets = [agriDataset];
     } else if (type === 'CommercialLand') {
         salesChart.data.datasets = [commercialLandDataset];
+    } else if (type === 'residentialLandData') {
+        salesChart.data.datasets = [residentialLandDataset];
     } else { // both
-        salesChart.data.datasets = [apartmentDataset, warehouseDataset, agriDataset, commercialLandDataset];
+        salesChart.data.datasets = [apartmentDataset, warehouseDataset, agriDataset, commercialLandDataset, residentialLandDataset];
     }
 
     salesChart.update();
@@ -125,7 +137,7 @@ updateGraph('Apartment');
 
 // For illustration, let's add random values to the stats blocks
 document.getElementById('totalTransactions').textContent = Math.floor(Math.random() * 500);
-document.getElementById('totalWorth').textContent = "$" + (Math.random() * 1000000).toFixed(2);
+document.getElementById('totalWorth').textContent = (Math.random() * 1000000).toFixed(2);
 document.getElementById('totalUnits').textContent = Math.floor(Math.random() * 500);
 document.getElementById('totalBuildings').textContent = Math.floor(Math.random() * 300);
 document.getElementById('totalLands').textContent = Math.floor(Math.random() * 200);
