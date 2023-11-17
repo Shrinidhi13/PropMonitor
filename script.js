@@ -45,3 +45,14 @@ function redirectToTransactionsDetails() {
 
     window.location.href = 'transaction.html#TransactionDetails';
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Your initialization code here
+
+    // Simulate a delay (you can replace this with your actual loading logic)
+    setTimeout(function () {
+        // Hide the loading screen after the delay
+        document.getElementById("loading-screen").style.display = "none";
+    }, 2000); // Adjust the delay time (in milliseconds) as needed
+});
