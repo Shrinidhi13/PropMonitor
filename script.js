@@ -56,3 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("loading-screen").style.display = "none";
     }, 2000); // Adjust the delay time (in milliseconds) as needed
 });
+
+
+function redirectToAbout() {
+
+    window.location.href = 'about.html';
+}

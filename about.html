@@ -12,7 +12,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="transaction.css">
+    <link rel="stylesheet" href="about.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -95,7 +96,7 @@
                             Transaction
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#TransactionDetails">View transactions</a></li>
+                            <li><a class="dropdown-item" href="transaction.html">View transactions</a></li>
 
                             <li>
                                 <hr class="dropdown-divider">
@@ -118,64 +119,110 @@
     </nav>
 
 
-    <h2 class="text-center ">Transaction Graph</h2>
-    <p class="text-center">Welcome</p>
-    <div class="content-container">
-        <div class="sales-graph-container">
-            <div class="graph-top-bar">
-                <div class="btn-container">
-                    <div class="btn-group">
-                        <button onclick="updateGraph('both')" data-type="both">All</button>
-                        <button onclick="updateGraph('Apartment')" data-type="Apartment">Apartment</button>
-                        <button onclick="updateGraph('Warehouse')" data-type="Warehouse">Warehouse</button>
-                        <button onclick="updateGraph('Agricultural')" data-type="Agricultural">Agricultural
-                            land</button>
-                        <button onclick="updateGraph('CommercialLand')" data-type="CommercialLand">Commercial
-                            Land</button>
-
-                        <button onclick="updateGraph('residentialLandData')" data-type="residentialLandData">Residential
-                            Land</button>
-                    </div>
+    <!-- About Section -->
+    <section id="About" class="py-5 animate-on-scroll">
+        <div class="container">
+            <!-- Vision Section with Image -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <img src="home3.jpg" class="img-fluid rounded" alt="Vision Image">
                 </div>
-
-
-            </div>
-            <div class="date-container">
-                <label for="datePicker" class="date-label">Select Date:</label>
-                <div class="date-input-wrapper">
-                    <input type="date" id="datePicker" onchange="updateDateDisplay()">
-                    <div id="selectedDate"></div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Vision:</h3>
+                    <p class="lead">To build the Google of Real Estate industry.</p>
                 </div>
             </div>
-            <canvas id="salesGraph"></canvas>
+
+            <!-- About Us Section with Background Color -->
+            <div class="row  p-5 mb-5">
+                <div class="col-lg-12">
+                    <h3 class="mb-4 text-light">About Us:</h3>
+                    <p class="lead text-light">PropMonitor is an online property transaction tracker tool. We are a
+                        PropTech
+                        startup based in India that aims to bring transparency to the real estate industry by making
+                        transaction data available to the public. We believe that access to reliable and up-to-date
+                        information can empower buyers, sellers, investors, and agents to make informed decisions and
+                        negotiate better deals.</p>
+                    <p class="lead text-light">Our platform collects, analyzes, and displays data from various sources,
+                        such as
+                        government records, property portals, brokers, and surveys. We provide insights on market
+                        trends, price movements, demand and supply, inventory, and more. Whether you are looking for a
+                        new home, selling your property, investing in real estate, or seeking professional advice,
+                        PropMonitor can help you with data-driven solutions.</p>
+                </div>
+            </div>
+
+            <!-- Goal Section with Image -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <img src="sorasak-KxCJXXGsv9I-unsplash.jpg" class="img-fluid rounded" alt="Goal Image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">What is our goal?</h3>
+                    <p class="lead">Our goal is to create the world's most extensive database of property transactions.
+                        In India, where real estate is complex and data is limited, we aim to provide the public with
+                        the information they need to make informed investment decisions. We are committed to bridging
+                        the gap in the real estate market and providing valuable insights for our users.</p>
+                </div>
+            </div>
+
+            <!-- How can you Help? Section with Background Color -->
+            <div class="row  p-5 mb-5">
+                <div class="col-lg-12">
+                    <h3 class="mb-4 text-light">How can you Help?</h3>
+                    <p class="lead text-light">The general public can contribute to building our database by providing
+                        information
+                        about property transactions in their area. This could include details such as sale prices,
+                        property features, and transaction dates. Additionally, individuals can share their knowledge of
+                        local real estate trends and market conditions. By collaborating with the public, we can gather
+                        a wealth of valuable data and insights that will enrich our database and benefit the community
+                        as a whole.</p>
+                </div>
+            </div>
+
+            <!-- Benefits for Real Estate Professionals Section with Image -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <img src="jason-dent-w3eFhqXjkZE-unsplash.jpg" class="img-fluid rounded" alt="Benefits Image">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">What are the benefits for Real Estate Professionals?</h3>
+                    <p class="lead">Real Estate professionals, including brokers, property valuers/appraisers,
+                        engineers, and others, have the opportunity to collaborate and contribute their data to create a
+                        free and open-source database. In return, they will gain access to a valuable source of
+                        potential leads. The more they contribute, the more features they can unlock, enhancing their
+                        access to valuable information and opportunities within the industry.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Contact Us Section -->
 
+    <section id="ContactUs" class="py-5">
 
+        <div class="container ">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-6">
+                    <h3 class="mb-4 text-light">Contact Information</h3>
+                    <p><strong>PropMonitor Office</strong></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+                    <p><i class="fas fa-phone"></i> +91-7795490299</p>
+                    <p><i class="fas fa-envelope"></i> faraz99.freelance@gmail.com</p>
+                </div>
 
+                <!-- Google Map -->
+                <div class="col-lg-6 ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.488724216952!2d74.5128682!3d15.883446899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf614fcf0bed13%3A0x154156e8c393441b!2s2nd%20Cross%2C%20Azam%20Nagar%2C%20Belagavi%2C%20Karnataka%20590010!5e0!3m2!1sen!2sin!4v1700285672642!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <div class="content-container-tran" id="TransactionDetails">
-
-        <div class="stats-container">
-            <h2>Transaction details</h2>
-            <div class="stat-block">Total Transactions: <span id="totalTransactions">0</span></div>
-            <div class="stat-block">Total Worth: &#8377;<span id="totalWorth">0</span></div>
-            <div class="stat-block">Total Units: <span id="totalUnits">0</span></div>
-            <div class="stat-block">Buildings: <span id="totalBuildings">0</span></div>
-            <div class="stat-block">Lands: <span id="totalLands">0</span></div>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-
-
-    <div class="map-container">
-        <h2>Location</h2>
-        <div id="map" style="width: 100%; height: 600px;"></div>
-        <p class="map-note">Click on the highlighted red dots to get property information.</p>
-    </div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </section>
 
 
 
@@ -221,9 +268,6 @@
                         <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
-
-
-
                 </div>
             </div>
 
@@ -261,6 +305,7 @@
 
     <script src="transaction.js"></script>
     <script src="script.js"></script>
+    <script src="about.js"></script>
 
 
 </body>
