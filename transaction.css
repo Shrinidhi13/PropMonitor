@@ -281,3 +281,71 @@
         /* Adjust the height as needed */
     }
 }
+
+/* Add this to your existing CSS or create a new style.css file */
+
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the building details section */
+.building-details-section {
+    margin-top: 20px;
+}
+
+/* Styling for the building details table */
+.building-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.building-details-table th,
+.building-details-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.building-details-table th {
+    background-color: #f5f5f5;
+}
+
+/* Styling for table rows */
+.building-details-table tbody tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+/* Styling for pagination buttons */
+#pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#pagination-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#pagination-container button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for total transactions and total worth sections */
+h2 {
+    color: #333;
+}
+
+span {
+    font-weight: bold;
+    color: #4CAF50;
+}

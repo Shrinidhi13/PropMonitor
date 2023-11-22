@@ -20,18 +20,19 @@ fetch('transactions.json')
     .then(response => response.json())
     .then(data => {
         data.forEach(transaction => {
-            const latLng = [transaction.lat, transaction.lng];
+            const latLng = [transaction.lat, transaction.lng]; // Updated to use lat and lng from Location
             const marker = L.marker(latLng, {
-                icon: createCustomMarker(transaction.transactionAmount)
+                icon: createCustomMarker(transaction['Transaction Value'])
             }).addTo(map);
 
             marker.bindPopup(`
-                <strong>Property Type:</strong> ${transaction.propertyType}<br>
-                <strong>Transaction Amount:</strong> ${transaction.transactionAmount}<br>
-                <strong>Date:</strong> ${transaction.date}
+                <strong>Building Name:</strong> ${transaction['Building Name']}<br>
+                <strong>Transaction Value:</strong> ${transaction['Transaction Value']}<br>
+                <strong>Date:</strong> ${transaction['trans Date']}
             `);
         });
     });
+
 
 
 // Random sales and mortgage data
@@ -136,8 +137,8 @@ updateGraph('Apartment');
 
 
 // For illustration, let's add random values to the stats blocks
-document.getElementById('totalTransactions').textContent = Math.floor(Math.random() * 500);
-document.getElementById('totalWorth').textContent = (Math.random() * 1000000).toFixed(2);
+
+
 document.getElementById('totalUnits').textContent = Math.floor(Math.random() * 500);
 document.getElementById('totalBuildings').textContent = Math.floor(Math.random() * 300);
 document.getElementById('totalLands').textContent = Math.floor(Math.random() * 200);
@@ -188,3 +189,66 @@ checkScreenSize();
 
 // Attach the function to the window resize event
 window.addEventListener('resize', checkScreenSize);
+
+const itemsPerPage = 10;
+let currentPage = 1;
+let buildingDetailsArray = [];
+
+// Fetch data from transactions.json
+fetch('transactions.json')
+    .then(response => response.json())
+    .then(data => {
+        buildingDetailsArray = data;
+        updateBuildingDetails();
+        updateTotalValues();
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+function updateBuildingDetails() {
+    const tableBody = document.getElementById('buildingDetailsTable').getElementsByTagName('tbody')[0];
+    tableBody.innerHTML = '';
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    for (let i = startIndex; i < endIndex && i < buildingDetailsArray.length; i++) {
+        const buildingDetails = buildingDetailsArray[i];
+        const row = tableBody.insertRow();
+        row.insertCell(0).innerText = buildingDetails['Building Name'];
+        row.insertCell(1).innerText = buildingDetails['Location'];
+        row.insertCell(2).innerText = buildingDetails['Transaction Value'];
+        row.insertCell(3).innerText = buildingDetails['Comments'];
+        row.insertCell(4).innerText = buildingDetails['Area (Sq. Ft.)'];
+    }
+
+    updatePagination();
+}
+
+function updatePagination() {
+    const totalPages = Math.ceil(buildingDetailsArray.length / itemsPerPage);
+    const paginationContainer = document.getElementById('pagination-container');
+    paginationContainer.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.innerText = i;
+        button.addEventListener('click', () => {
+            currentPage = i;
+            updateBuildingDetails();
+        });
+
+        paginationContainer.appendChild(button);
+    }
+}
+
+function updateTotalValues() {
+    document.getElementById('totalTransactions').textContent = buildingDetailsArray.length;
+
+    const totalTransactionValue2 = buildingDetailsArray.reduce((sum, entry) => {
+        const transactionValue2 = entry["Transaction Value 2"] || 0;
+        return sum + transactionValue2;
+    }, 0);
+
+    const formattedTotal = (totalTransactionValue2 / 10000000).toFixed(2) + " CR";
+    document.getElementById('totalWorth').textContent = formattedTotal;
+}
