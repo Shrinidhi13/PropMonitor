@@ -303,7 +303,7 @@ body {
 
 .building-details-table th,
 .building-details-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #322121;
     padding: 12px;
     text-align: left;
 }
@@ -326,7 +326,7 @@ body {
 }
 
 #pagination-container button {
-    background-color: #4CAF50;
+    background-color: #000800;
     color: white;
     border: none;
     padding: 10px 15px;
